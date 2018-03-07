@@ -1,8 +1,11 @@
 <div>
   <h3>{{ note.content }}</h3>
   <span class="button is-small is-success" (click)='addHeartToNote(note.hearts)'>
-    Heart <i class="fa fa-heart"></i>
+    Like <i class="fa fa-thumbs-up"></i>
   </span>
-  <span class="button is-small is-danger" (click)='deleteNote(note?.id)'>Delete</span>
-  <p>This note has been liked {{ note.hearts || 0 }} times.</p>
+  <span class="button is-small is-warning" (click)='addHeartToNote(note.hearts)'>
+    Dislike <i class="fa fa-thumbs-down"></i>
+  </span>
+  <span class="button is-small is-danger" (click)='deleteNote(note?.id)'>Delete<i class="fa fa-trash"></i></span>
+  <p>This post has been liked {{ note.hearts || 0 }} times.</p>
 </div>
