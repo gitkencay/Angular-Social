@@ -1,9 +1,10 @@
-<h1>Add Posts</h1>
+<h1>News Feed</h1> <hr>
+<h3>Add Post</h3>
 
 <input [(ngModel)]="content" placeholder="Whats on your mind" class="input">
 
 
-<button class="button is-info" (click)="createNote()" [disabled]="content?.length < 2 || content?.length > 200">
+<button class="button is-info" (click)="createNote()" [disabled]="content?.length < 1 || content?.length > 200">
   Post
 </button>
 <hr>
