@@ -20,11 +20,19 @@ import { UiModule } from './ui/shared/ui.module';
 import { NotesModule } from './notes/notes.module';
 ///// End FireStarter
 
-import { environment } from '../environments/environment';
 
 import { AngularFireModule } from 'angularfire2';
-export const firebaseConfig = environment.firebaseConfig;
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+
+var firebaseConfig = {
+  apiKey: "AIzaSyC5lJra_1yVraJDeDuFUTOjrdGd1nYNVyI",
+  authDomain: "angular-social-d897c.firebaseapp.com",
+  databaseURL: "https://angular-social-d897c.firebaseio.com",
+  projectId: "angular-social-d897c",
+  storageBucket: "angular-social-d897c.appspot.com",
+  messagingSenderId: "806726911085"
+}
+
 
 @NgModule({
   declarations: [
@@ -40,6 +48,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     UiModule,
     NotesModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule
   ],
   bootstrap: [
     AppComponent,
